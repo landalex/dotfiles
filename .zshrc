@@ -48,6 +48,7 @@ ZSH_THEME="pure"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/GitHub/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # User configuration
 
