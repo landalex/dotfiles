@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+export EDITOR=vim
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -49,6 +50,11 @@ plugins=(git z brew common-aliases)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/GitHub/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+alias git='/usr/local/Cellar/git/2.3.1/bin/git'
+alias dash='/Users/AlexLand/Scripts/dash.sh'
+alias hockey='/usr/local/bin/python3 /Users/AlexLand/NHLStreams/Hockey/nhlstreams.py'
+alias zshconfig='vi ~/.zshrc'
+alias rtop='/Users/AlexLand/GitHub/rtop/rtop root@alexland.ca'
 
 # User configuration
 
