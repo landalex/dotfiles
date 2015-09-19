@@ -46,7 +46,7 @@ ZSH_THEME="pure"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z brew common-aliases)
+plugins=(git z brew fortune-mod)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/GitHub/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -55,6 +55,9 @@ alias dash='/Users/AlexLand/Scripts/dash.sh'
 alias hockey='/usr/local/bin/python3 /Users/AlexLand/NHLStreams/Hockey/nhlstreams.py'
 alias zshconfig='vi ~/.zshrc'
 alias rtop='/Users/AlexLand/GitHub/rtop/rtop root@alexland.ca'
+alias p='/usr/local/bin/p'
+alias pingserver='/Users/AlexLand/Scripts/pingserver.sh'
+alias pubkey='cat /Users/AlexLand/.ssh/id_rsa.pub'
 
 # User configuration
 
@@ -86,3 +89,29 @@ export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:~/bin:$PATH
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export PATH="/usr/local/p/versions/python:$PATH"
+
+# Setup zsh-autosuggestions
+# source /Users/AlexLand/.zsh-autosuggestions/autosuggestions.zsh
+
+# Enable autosuggestions automatically
+# zle-line-init() {
+# zle autosuggest-start
+# }
+
+# zle -N zle-line-init
+
+# use ctrl+t to toggle autosuggestions(hopefully this wont be needed as
+# zsh-autosuggestions is designed to be unobtrusive)
+# bindkey '^T' autosuggest-toggle
+unset MAILCHECK
+
+### MOTD Script Start ###
+# Display MotD
+./.motd.sh
+if [[ -e $HOME/.motd ]]; then cat $HOME/.motd; fi
+
+### MOTD Script End ###
+
+test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
